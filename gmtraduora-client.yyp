@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMProject",
+  "resourceVersion": "1.7",
+  "name": "gmtraduora-client",
+  "AudioGroups": [
+    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
+  ],
+  "configs": {
+    "children": [],
+    "name": "Default",
+  },
+  "defaultScriptType": 1,
+  "Folders": [
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"HttpClient","folderPath":"folders/HttpClient.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Traduora Client","folderPath":"folders/Traduora Client.yy",},
+  ],
+  "IncludedFiles": [],
+  "isEcma": false,
+  "LibraryEmitters": [],
+  "MetaData": {
+    "IDEVersion": "2023.11.0.121",
+  },
+  "resources": [
+    {"id":{"name":"MinHeap","path":"scripts/MinHeap/MinHeap.yy",},},
+    {"id":{"name":"oAsyncWrapperNetworking","path":"objects/oAsyncWrapperNetworking/oAsyncWrapperNetworking.yy",},},
+    {"id":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
+    {"id":{"name":"Chain","path":"scripts/Chain/Chain.yy",},},
+    {"id":{"name":"oAsyncWrapperHttp","path":"objects/oAsyncWrapperHttp/oAsyncWrapperHttp.yy",},},
+    {"id":{"name":"HttpClient","path":"scripts/HttpClient/HttpClient.yy",},},
+    {"id":{"name":"TraduoraClient","path":"scripts/TraduoraClient/TraduoraClient.yy",},},
+    {"id":{"name":"Logger","path":"scripts/Logger/Logger.yy",},},
+    {"id":{"name":"AsyncWrapper","path":"scripts/AsyncWrapper/AsyncWrapper.yy",},},
+    {"id":{"name":"obj_demo","path":"objects/obj_demo/obj_demo.yy",},},
+  ],
+  "RoomOrderNodes": [
+    {"roomId":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
+  ],
+  "templateType": null,
+  "TextureGroups": [
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+  ],
+}

@@ -1,0 +1,15 @@
+{
+  "FolderOrderSettings": [
+    {"name":"HttpClient","order":10,"path":"folders/HttpClient.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"MinHeap","order":1,"path":"scripts/MinHeap/MinHeap.yy",},
+    {"name":"oAsyncWrapperNetworking","order":6,"path":"objects/oAsyncWrapperNetworking/oAsyncWrapperNetworking.yy",},
+    {"name":"rm_demo","order":8,"path":"rooms/rm_demo/rm_demo.yy",},
+    {"name":"Chain","order":3,"path":"scripts/Chain/Chain.yy",},
+    {"name":"oAsyncWrapperHttp","order":5,"path":"objects/oAsyncWrapperHttp/oAsyncWrapperHttp.yy",},
+    {"name":"Logger","order":2,"path":"scripts/Logger/Logger.yy",},
+    {"name":"AsyncWrapper","order":4,"path":"scripts/AsyncWrapper/AsyncWrapper.yy",},
+    {"name":"obj_demo","order":7,"path":"objects/obj_demo/obj_demo.yy",},
+  ],
+}
