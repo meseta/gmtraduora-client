@@ -44,6 +44,19 @@ function TraduoraClient(_server_url, _project_id, _parent_logger=undefined) : Ht
 			});
 	};
 	
+	/** Get a list of locales available
+	 * @return {Struct.Chain}
+	 */
+	static get_locales = function() {
+		return self.get($"/projects/{self.__project_id}/translations")
+			.chain_callback(function(_payload) {
+				return array_map(_payload.data, function(_item) { return _item.locale.code; });
+			})
+			.on_error(function(_err) {
+				self.logger.warning("Could not get locales list", {err: _err});	
+			});
+	};
+	
 	/** Authenticate with Traduora server
 	 * @param {String} _client_id The client ID
 	 * @param {String} _client_secret The client secret

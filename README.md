@@ -75,6 +75,32 @@ traduora.authenticate("<client id>", "<client secret>")
 
 The above will execute four language fetches in parallel, and the last callback will run once the values have returned.
 
+### Get all the things
+We can also query for all the available locales to populate a menu, or... just request all of them
+
+```gml
+// Create traduora
+traduora = new TraduoraClient("https://traduora-demo.meseta.dev", "<project id>");
+
+// Authenticate, and then get a bunch of locales in parallel
+traduora.authenticate("<client id>", "<client secret>")
+  .chain_callback(function() {
+		return traduora.get_locales();
+	})
+	.chain_callback(function(_locales) {
+		return Chain.concurrent_struct(
+			array_reduce(_locales, function(_struct, _locale) {
+				_struct[$ _locale] = traduora.get_locale(_locale);
+			}, {})
+		)
+	})
+	.chain_callback(function(_results) {
+		show_debug_message(_results);
+	})
+```
+
+The above will fetch a list of locales, `_locales` will have a value like `["en", "es", "fr", "de"]` or whatever is available in the project. The next callback constructs a similar Chain concurrent struct as the previous section, but dynamically using this array. Once all the languages have been fetched, the result is debug logged.
+
 ### Backing up
 Because Traduora doesn't provide an easy way to back up all the terms using the web UI, I've provided a function to run that'll save all the terms to a local file:
 
