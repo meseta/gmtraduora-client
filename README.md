@@ -26,7 +26,7 @@ In the above code, once the value is back, the `_payload`` will contain all the 
 ### Using the cache
 Every time you do `get_locale()`, this library will save the json for you, so that next time it is available immediately. You can check for this using:
 
-```
+```gml
 // Create traduora
 traduora = new TraduoraClient("https://traduora-demo.meseta.dev", "<project id>");
 
